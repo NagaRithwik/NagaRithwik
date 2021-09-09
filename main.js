@@ -1,15 +1,25 @@
-function phonelap(){
-    window.location = "phonelap.html";
+status = "";
+video = "";
+
+function preload(){
+   video = loadVideo('video.mp4');
+   video.hide();
 }
-function tvac(){
-    window.location = "tvac.html";
+function setup(){
+    canvas = createCanvas(500,400);
+    canvas.center();
 }
-function humans(){
-    window.location = "humans.html";
+function start(){
+    objectDetector=ml5.objectDetector('cocossd',modelLoaded);
+    document.getElementById("status").innerHTML = "Status:- Detecting Objects";
 }
-function bookpen(){
-    window.location = "bookpen.html";
+function modelLoaded(){
+    console.log("Model Loaded!");
+    status = true;
+    video.loop();
+    video.speed(1);
+    video.volume(0);
 }
-function bottles(){
-    window.location = "bottles.html";
+function draw(){
+   image(video,0,0,500,400)
 }

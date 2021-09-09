@@ -1,7 +1,7 @@
 <html>
 <head>
 
-	<title>Object Detection</title>
+	<title>AI Video Surveillance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,26 +14,22 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body background="bg.jpg">
-  <center>
-    <h1 class="btn btn-warning heading">Object Detection WebApp by CH.Naga Rithwik</h1>
-     <br><br>
-     <h2 class="btn btn-danger">
-         NOTE:-The Model is Trained only in these five images . To get the images click on the buttons given below -
-     </h2>
-     <br><br>
-     <button onclick="phonelap()" class="btn btn-success">Phone and Laptop</button>
-     <br><br>
-     <button onclick="tvac()" class="btn btn-success">Television and Air Conditioner</button>
-     <br><br>
-     <button onclick="humans()" class="btn btn-success">Human Beings</button>
-     <br><br>
-     <button onclick="bookpen()" class="btn btn-success">Book and Pen</button>
-     <br><br>
-     <button onclick="bottles()" class="btn btn-success">Water Bottles</button>
-  </center>
-
-  <script src="main.js"></script>
+<body background="background.jpg">
+<center>
+  <h3 class="btn btn-warning header">AI Video Surveillance</h3>
+  <br><br>
+  <button onclick="start()" class="btn btn-success" id="start_button">Start</button>
+  <br><br>
+  <h3 class="btn btn-warning" id="number_of_objects"></h3>
+  <br><br>
+  <h3 class="btn btn-danger" id="status"></h3>
+</center>
+    
+   <div class="copy_right_footer">
+     Developed by CH.Naga Rithwik
+   </div>
+<script src="main.js"></script>
 
 </body>
+
 </html>
