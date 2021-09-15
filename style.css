@@ -1,27 +1,18 @@
 body{
     background-size: cover;
+    background-position: center;
 }
 .header{
-    font-size: 22px;
+    width: 100%;
     margin: 0px;
-    width: 100%;
+    font-size: 22px;
 }
-#status , #number_of_objects{
+#status , #baby_nf , #objects{
     font-size: 18px;
-}
-.copy_right_footer{
-    width: 100%;
-    bottom: 0;
-    background: chartreuse;
-    color: black;
-    line-height: 2;
-    font-size: 18px;
-    text-align: center;
-    position: fixed;
 }
 canvas{
     border: 2px solid white;
+    box-shadow: 5px 5px 5px grey;
     border-radius: 20px;
-    margin-top: 70px;
-    box-shadow: 5px 5px 5px white;
+    margin-top: 50px;
 }
