@@ -20,12 +20,24 @@ text-align: left;
 font-size: 22px;
 }
 
-.copy_right_footer{
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-    text-align: center;
-    background: grey;
-    color: white;
-    line-height: 2;
+.modal-dialog
+{
+    width: 70%;
 }
+.modal-body
+{
+    text-align: left;
+    font-size: 20px;
+}
+h4
+{
+   background-color: grey;
+   color:white;
+   line-height: 2;
+}
+canvas 
+  {
+      border:3px solid white;
+      border-radius: 20px;
+      box-shadow:  5px 5px 5px white;
+  }

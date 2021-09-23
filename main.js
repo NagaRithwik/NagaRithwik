@@ -21,9 +21,37 @@ var ball = {
     dy:3
 }
 
+rightWrist="";
+rightWristX=0;
+rightWristY=0;
+
 function setup(){
-  var canvas =  createCanvas(700,600);
-}
+    var canvas =  createCanvas(700,600);
+    canvas.parent('canvas');
+    
+    video = createCapture(VIDEO);
+    video.size(700, 600);
+    video.hide();
+    
+    poseNet = ml5.poseNet(video, modelLoaded);
+    poseNet.on('pose', gotPoses);
+    }
+    
+    function modelLoaded() {
+      console.log('PoseNet Is Initialized');
+    }
+    
+    function gotPoses(results)
+    {
+      if(results.length > 0)
+      {
+    console.log(results)
+        rightWristY = results[0].pose.rightWrist.y;
+        rightWristX = results[0].pose.rightWrist.x;
+      }
+    }
+    
+
 
 
 function draw(){
